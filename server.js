@@ -33,7 +33,7 @@ wss.on('connection', function(ws) {
   
     ws.on('message',function(message) {
         console.log('Received Message: ' + message);
-        ws.send(JSON.stringify(message), function() {  });
+      ws.send(JSON.stringify("you said: " + message), function() {  });
     });
   
 });
